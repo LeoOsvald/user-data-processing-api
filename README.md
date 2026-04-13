@@ -17,7 +17,7 @@ Este repositório contém um arquivo `.json` com aproximadamente **32.000 usuár
 
 O objetivo do projeto é desenvolver uma **REST API** capaz de:
 
-1. Receber um arquivo `.json` por meio de uma URL enviada via `form-data`;
+1. Receber um arquivo `.json` via `form-data`;
 2. Processar e persistir os dados conforme os requisitos definidos;
 3. Disponibilizar os dados processados para consulta através de endpoints.
 
