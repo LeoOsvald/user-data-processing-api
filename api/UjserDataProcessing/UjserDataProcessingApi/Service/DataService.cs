@@ -14,23 +14,42 @@ namespace UserDataProcessingApi.Service
 
         public async Task<IEnumerable<UserData>> ProcessUserDataAsync(IFormFile file)
         {
-            using var reader = new StreamReader(file.OpenReadStream());
-            var json = await reader.ReadToEndAsync();
 
-            // aqui você pode desserializar o JSON
-            var obj = JsonSerializer.Deserialize<List<UserData>>(json);
+            try
+            {
+                using var reader = new StreamReader(file.OpenReadStream());
+                var json = await reader.ReadToEndAsync();
+
+                var obj = JsonSerializer.Deserialize<List<UserData>>(json);
 
 
-            await userRepository.InsertManyAsync(obj);
+                await userRepository.InsertManyAsync(obj);
 
-            return obj;
+                return obj;
+            }
+            catch (Exception ex )
+            {
+
+                throw ex;
+            }
+
         }
 
         public async Task<UserData> GetUserDataById(string id)
         {
-            var user = await userRepository.GetByIdAsync(id);
 
-            return user;
+            try
+            {
+                var user = await userRepository.GetByIdAsync(id);
+
+                return user;
+            }
+            catch (Exception ex )
+            {
+
+                throw ex;
+            }
+
         }
     }
 }
