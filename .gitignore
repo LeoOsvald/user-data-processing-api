@@ -1,0 +1,76 @@
+# Build results
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# ASP.NET Core
+appsettings.Development.json
+
+# Publish output
+publish/
+*.publishproj
+
+# NuGet
+*.nupkg
+.nuget/
+packages/
+
+# OS files
+[Dd]esktop.ini
+Thumbs.db
+
+# Environment variables
+.env
+
+# Test results
+TestResults/
+
+# Coverage
+coverage/
+*.coverage
+*.coveragexml
+
+# Entity Framework
+Migrations/
+
+# IIS Express
+IISExpress/
+
+# DotCover
+*.dotCover
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# StyleCop
+StyleCopReport.xml
+
+# Backup & temp files
+*.bak
+*.tmp
+*.temp
+
+# JetBrains Rider
+*.sln.iml
+
+# MacOS
+.DS_Store
+
+# Windows image file caches
+ehthumbs.db
